@@ -1,0 +1,227 @@
+[
+    {
+        "id": 1,
+        "categoria": "evoluciones",
+        "tag": "NUEVO",
+        "fecha": "05 FEB 2024",
+        "titulo": "Evolución del Bombardero: Rebote Mortal",
+        "resumen": "El Bombardero ahora lanza bombas que rebotan dos veces, alcanzando estructuras lejanas. ¡Una pesadilla para el Log-bait!",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_Evolution_Bomber_Web.jpg"
+    },
+    {
+        "id": 2,
+        "categoria": "balance",
+        "tag": "AJUSTES",
+        "fecha": "01 FEB 2024",
+        "titulo": "Cambios de Balance - Temporada de Amor",
+        "resumen": "Nerf al Pequeño Príncipe y buff al Mago de Hielo. Descubre cómo afecta esto al meta actual.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_BalanceChanges_Feb_2024.jpg"
+    },
+    {
+        "id": 3,
+        "categoria": "eventos",
+        "tag": "DESAFÍO",
+        "fecha": "28 ENE 2024",
+        "titulo": "Desafío del Mago Eléctrico",
+        "resumen": "Gana una copia gratuita del Mago Eléctrico completando este desafío de 12 victorias.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_News_EWiz_Challenge.jpg"
+    },
+    {
+        "id": 4,
+        "categoria": "evoluciones",
+        "tag": "META",
+        "fecha": "20 ENE 2024",
+        "titulo": "Evolución de los Wall Breakers",
+        "resumen": "Los rompemuros ahora dejan pequeños barriles tras explotar. ¿Serán la nueva carta top?",
+        "imagen": "https://pbs.twimg.com/media/GFFL6vSWAAAs7tT.jpg"
+    },
+    {
+        "id": 5,
+        "categoria": "eventos",
+        "tag": "COMUNIDAD",
+        "fecha": "15 ENE 2024",
+        "titulo": "Torneo Real: ¡Premios x10!",
+        "resumen": "Participa en el torneo de este mes y consigue el cofre legendario si llegas a las 15 victorias.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CRL23_Finals_Social_1200x630_Generic.jpg"
+    },
+    {
+        "id": 6,
+        "categoria": "balance",
+        "tag": "IMPORTANTE",
+        "fecha": "10 ENE 2024",
+        "titulo": "Rework a la Torre de Bombas",
+        "resumen": "Se ajusta el daño de muerte para que sea más efectivo contra unidades aéreas.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/_1200x630_crop_center-center_82_none/Balance-Changes-Web-Image.jpg"
+    },
+    {
+        "id": 7,
+        "categoria": "evoluciones",
+        "tag": "GRATIS",
+        "fecha": "05 ENE 2024",
+        "titulo": "Regalo de San Valentín: Fragmentos de Evolución",
+        "resumen": "Inicia sesión cada día para conseguir 6 fragmentos de evolución gratis.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_News_Valentine_Gift.jpg"
+    },
+    {
+        "id": 8,
+        "categoria": "eventos",
+        "tag": "CAOS",
+        "fecha": "01 ENE 2024",
+        "titulo": "Modo: Tropas Invisibles",
+        "resumen": "¡La locura llega a la arena! Todas las tropas son invisibles hasta que atacan.",
+        "imagen": "https://supercell.com/static/005e5572005047b7484d08f4f9f7d08b/16149/clash_royale_top_bg.webp"
+    },
+    {
+        "id": 9,
+        "categoria": "balance",
+        "tag": "META",
+        "fecha": "25 DIC 2023",
+        "titulo": "Ajuste de Emergencia: Pequeño Príncipe",
+        "resumen": "Se reduce el rango de carga del Guardián Real para balancear el juego competitivo.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_BalanceChanges_Sept_2023_v2.jpg"
+    },
+    {
+        "id": 10,
+        "categoria": "evoluciones",
+        "tag": "NUEVO",
+        "fecha": "15 DIC 2023",
+        "titulo": "Evolución de la Valkiria",
+        "resumen": "¡Efecto tornado! Cada giro de la Valkiria ahora atrae a los enemigos cercanos.",
+        "imagen": "https://pbs.twimg.com/media/FxtM-PzXgAInR61.jpg"
+    },
+    {
+        "id": 11,
+        "categoria": "eventos",
+        "tag": "ESPECIAL",
+        "fecha": "10 DIC 2023",
+        "titulo": "Clashmas: El regreso del Tronco Navideño",
+        "resumen": "El desafío temático de Navidad ha vuelto con una skin de torre exclusiva.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_News_Clashmas.jpg"
+    },
+    {
+        "id": 12,
+        "categoria": "balance",
+        "tag": "AJUSTES",
+        "fecha": "05 DIC 2023",
+        "titulo": "Buff al Gigante Noble",
+        "resumen": "Se aumenta su velocidad de ataque un 5% para que sea más viable en ladder.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_BalanceChanges_Feb_2024.jpg"
+    },
+    {
+        "id": 13,
+        "categoria": "evoluciones",
+        "tag": "GUÍA",
+        "fecha": "01 DIC 2023",
+        "titulo": "Cómo usar la Evolución del Recluta",
+        "resumen": "Aprende a posicionar a tus reclutas evolucionados para maximizar su carga.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_Evolution_Bomber_Web.jpg"
+    },
+    {
+        "id": 14,
+        "categoria": "eventos",
+        "tag": "LADDER",
+        "fecha": "25 NOV 2023",
+        "titulo": "Doble de Oro en el Camino de Leyendas",
+        "resumen": "Aprovecha este fin de semana para maxear tus cartas con el bonus de oro.",
+        "imagen": "https://supercell.com/static/005e5572005047b7484d08f4f9f7d08b/16149/clash_royale_top_bg.webp"
+    },
+    {
+        "id": 15,
+        "categoria": "balance",
+        "tag": "NERF",
+        "fecha": "15 NOV 2023",
+        "titulo": "Nerf al Montapuerco",
+        "resumen": "Se reduce un 10% el daño del primer ataque tras saltar el río.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_BalanceChanges_Sept_2023_v2.jpg"
+    },
+    {
+        "id": 16,
+        "categoria": "evoluciones",
+        "tag": "NUEVO",
+        "fecha": "05 NOV 2023",
+        "titulo": "Evolución del Murciélago",
+        "resumen": "Ahora recuperan vida al atacar. ¡Una horda imparable si no tienes hechizos!",
+        "imagen": "https://pbs.twimg.com/media/FxtM-PzXgAInR61.jpg"
+    },
+    {
+        "id": 17,
+        "categoria": "eventos",
+        "tag": "CRL",
+        "fecha": "25 OCT 2023",
+        "titulo": "Gran Final de la CRL",
+        "resumen": "Sigue las finales mundiales en directo para ganar recompensas exclusivas en el juego.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CRL23_Finals_Social_1200x630_Generic.jpg"
+    },
+    {
+        "id": 18,
+        "categoria": "balance",
+        "tag": "AJUSTES",
+        "fecha": "15 OCT 2023",
+        "titulo": "Buff a la Bruja Nocturna",
+        "resumen": "Ahora genera murciélagos un 0.5s más rápido. ¿Vuelve el Golem?",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/_1200x630_crop_center-center_82_none/Balance-Changes-Web-Image.jpg"
+    },
+    {
+        "id": 19,
+        "categoria": "evoluciones",
+        "tag": "NUEVO",
+        "fecha": "05 OCT 2023",
+        "titulo": "Evolución del Caballero",
+        "resumen": "Se reduce el daño recibido mientras camina. El tanque perfecto por 3 de elixir.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_Evolution_Bomber_Web.jpg"
+    },
+    {
+        "id": 20,
+        "categoria": "eventos",
+        "tag": "HALLOWEEN",
+        "fecha": "01 OCT 2023",
+        "titulo": "Temporada de Pesadilla",
+        "resumen": "Regresan los calabacines y el desafío del Fantasma Real.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_News_Clashmas.jpg"
+    },
+    {
+        "id": 21,
+        "categoria": "balance",
+        "tag": "NERF",
+        "fecha": "20 SEP 2023",
+        "titulo": "Nerf al Veneno",
+        "resumen": "Se reduce ligeramente la duración para equilibrar el control de arena.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_BalanceChanges_Sept_2023_v2.jpg"
+    },
+    {
+        "id": 22,
+        "categoria": "evoluciones",
+        "tag": "META",
+        "fecha": "10 SEP 2023",
+        "titulo": "Evolución del Bárbaro",
+        "resumen": "Ahora entran en modo furia con cada golpe. ¡Peligro para tus torres!",
+        "imagen": "https://pbs.twimg.com/media/FxtM-PzXgAInR61.jpg"
+    },
+    {
+        "id": 23,
+        "categoria": "eventos",
+        "tag": "DUELOS",
+        "fecha": "01 SEP 2023",
+        "titulo": "Nuevo Formato de Guerra de Clanes",
+        "resumen": "Descubre cómo ganar más medallas con los nuevos barcos de guerra.",
+        "imagen": "https://supercell.com/static/005e5572005047b7484d08f4f9f7d08b/16149/clash_royale_top_bg.webp"
+    },
+    {
+        "id": 24,
+        "categoria": "balance",
+        "tag": "REWORK",
+        "fecha": "20 AGO 2023",
+        "titulo": "Cambio al Esqueleto Gigante",
+        "resumen": "Se ajusta el peso de la unidad para que no sea tan fácil de desviar.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/_1200x630_crop_center-center_82_none/Balance-Changes-Web-Image.jpg"
+    },
+    {
+        "id": 25,
+        "categoria": "evoluciones",
+        "tag": "PRIMERA",
+        "fecha": "01 AGO 2023",
+        "titulo": "La Era de las Evoluciones ha llegado",
+        "resumen": "Descubre el nuevo poder de los Esqueletos y el Lanzafuegos.",
+        "imagen": "https://clashroyale.com/uploaded-images-blog/CR_Evolution_Bomber_Web.jpg"
+    }
+]

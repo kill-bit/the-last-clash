@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Clash | TLC - Portal Definitivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --accent: #4da6ff;
+            --border: #222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--text); scroll-behavior: smooth; }
+
+        /* --- NAVEGACIÓN --- */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--gold);
+            position: sticky;
+            top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        /* --- HERO --- */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('https://wallpaperaccess.com/full/1512401.jpg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            padding: 20px;
+        }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; color: var(--gold); line-height: 1; text-shadow: 2px 2px 20px rgba(0,0,0,0.5); }
+        .search-container {
+            background: white; padding: 5px; border-radius: 50px; display: flex;
+            width: 95%; max-width: 600px; margin-top: 30px; box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+        }
+        .search-container input { flex: 1; border: none; padding: 15px 25px; border-radius: 50px; outline: none; font-weight: bold; font-size: 1rem; color: #333; }
+        .search-container button { background: var(--gold); border: none; padding: 0 30px; border-radius: 50px; font-weight: 900; cursor: pointer; transition: 0.3s; color: #000; }
+        .search-container button:hover { background: #e6b800; transform: scale(1.05); }
+
+        /* --- SECCIÓN DE TARJETAS --- */
+        .section-preview {
+            padding: 50px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: -50px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .card h2 { color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* --- NOVEDADES DINÁMICAS --- */
+        .container { padding: 60px 5%; max-width: 1200px; margin: auto; }
+        .section-title { font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; text-align: center; font-weight: 900; text-transform: uppercase; }
+        
+        #novedades-dinamicas { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .news-card-auto {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .news-card-auto:hover { border-color: var(--gold); background: #222; }
+
+        /* --- MAZOS --- */
+        .deck-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .deck-card { background: #1a1a1a; padding: 20px; border-radius: 10px; border-left: 5px solid var(--gold); }
+        .cards-mini { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-top: 15px; }
+        .card-slot img { width: 100%; border-radius: 5px; }
+
+        footer { background: #000; padding: 60px 5% 20px; text-align: center; border-top: 2px solid var(--gold); }
+        .legal { font-size: 0.75rem; color: #777; max-width: 900px; margin: 30px auto; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">TLC</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="mazos.html">Mazos Top</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+                <li><a href="clanes.html">Clanes</a></li>
+                <li><a href="probabilidades.html">Probabilidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>THE LAST CLASH</h1>
+            <p style="font-weight: 700; margin-top: 10px;">Tu herramienta definitiva de Clash Royale</p>
+            <div class="search-container">
+                <input type="text" placeholder="Ingresa tu Tag #..." id="tagInput">
+                <button onclick="buscarJugador()">ANALIZAR</button>
+            </div>
+        </section>
+
+        <section class="section-preview">
+            <div class="card">
+                <h2>📈 Estadísticas</h2>
+                <p>Mira tu win rate, ciclo de cofres y progreso actual en tiempo real.</p>
+            </div>
+            <div class="card">
+                <h2>🃏 Mazos Top</h2>
+                <p>Copia los mejores mazos del mundo usados por los profesionales.</p>
+            </div>
+            <div class="card" style="cursor:pointer" onclick="location.href='clanes.html'">
+                <h2>🛡️ Clanes</h2>
+                <p>Descubre los mejores clanes del mundo y su ranking actual.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <h2 class="section-title">En Vivo: Top Mundial</h2>
+            <div id="novedades-dinamicas">
+                <p style="text-align:center; width:100%;">Cargando líderes actuales...</p>
+            </div>
+        </div>
+
+        <div class="container" style="background: #080808; border-radius: 20px;">
+            <h2 class="section-title">Mazos del Top 1 Mundial</h2>
+            <div class="deck-grid" id="mazos-top-auto">
+                </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo">TLC</div>
+        <p>Hecho por Fans para Fans de Clash Royale.</p>
+        <div class="legal">
+            Este material no es oficial y no está respaldado por Supercell... 
+            <br><br>
+            <a href="http://supercell.com/en/fan-content-policy/es/" target="_blank">Política de Contenidos de Fans de Supercell</a>
+        </div>
+    </footer>
+
+    <script>
+        // 1. FUNCION BUSCAR (Redirige a perfil.html)
+        function buscarJugador() {
+            let tag = document.getElementById('tagInput').value.trim().toUpperCase();
+            if (!tag) return alert("Por favor, ingresa un Tag válido");
+            // Quitamos el # si el usuario lo puso
+            tag = tag.replace('#', '');
+            window.location.href = `perfil.html?tag=${tag}`;
+        }
+
+        // 2. CARGAR NOVEDADES (Top Jugadores)
+        async function cargarNovedades() {
+            const div = document.getElementById('novedades-dinamicas');
+            try {
+                const res = await fetch('/api/locations/global/rankings/players?limit=4');
+                const data = await res.json();
+                
+                div.innerHTML = ''; // Limpiar
+                data.items.forEach(p => {
+                    div.innerHTML += `
+                        <div class="news-card-auto">
+                            <div>
+                                <small style="color:var(--gold)">RANK #${p.rank}</small>
+                                <h3 style="margin:5px 0;">${p.name}</h3>
+                                <small>${p.clan ? p.clan.name : 'Sin Clan'}</small>
+                            </div>
+                            <div style="text-align:right">
+                                <span style="font-size:1.2rem; font-weight:900;">🏆 ${p.trophies}</span>
+                            </div>
+                        </div>`;
+                });
+            } catch (e) { 
+                div.innerHTML = "<p>Conecta tu API KEY en Netlify para ver los datos en vivo.</p>"; 
+            }
+        }
+
+        // 3. CARGAR MAZOS AUTOMÁTICOS (Espía al #1 del mundo y muestra su mazo)
+        async function cargarMazosAuto() {
+            const div = document.getElementById('mazos-top-auto');
+            try {
+                // Buscamos quién es el #1
+                const resTop = await fetch('/api/locations/global/rankings/players?limit=1');
+                const topData = await resTop.json();
+                const topPlayerTag = topData.items[0].tag.replace('#', '%23');
+
+                // Traemos su perfil completo para ver su mazo
+                const resPerfil = await fetch(`/api/players/${topPlayerTag}`);
+                const player = await resPerfil.json();
+
+                div.innerHTML = `
+                    <div class="deck-card" style="grid-column: 1 / -1;">
+                        <h4 style="color: var(--gold);">Mazo actual de ${player.name} (Top 1 Global)</h4>
+                        <div class="cards-mini">
+                            ${player.currentDeck.map(card => `
+                                <div class="card-slot">
+                                    <img src="${card.iconUrls.medium}" alt="${card.name}">
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            } catch (e) {
+                div.innerHTML = "<p>Cargando mazos competitivos...</p>";
+            }
+        }
+
+        // Ejecutar todo al cargar
+        window.onload = () => {
+            cargarNovedades();
+            cargarMazosAuto();
+        };
+    </script>
+</body>
+</html>

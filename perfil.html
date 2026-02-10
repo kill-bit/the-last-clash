@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Jugador | TLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --accent: #4da6ff;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--text); margin: 0; }
+        
+        /* --- NAVEGACIÓN --- */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--gold);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+
+        /* --- BUSCADOR --- */
+        .search-section {
+            padding: 60px 5%;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://clashroyale.com/uploaded-images-blog/CR_Arena15_Banner.jpg');
+            background-size: cover;
+        }
+        .search-box {
+            display: flex;
+            max-width: 500px;
+            margin: 20px auto;
+            gap: 10px;
+        }
+        input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 5px;
+            border: 2px solid var(--gold);
+            background: #000;
+            color: white;
+            font-weight: bold;
+        }
+        .btn-search {
+            background: var(--gold);
+            border: none;
+            padding: 12px 25px;
+            font-weight: 900;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* --- TARJETA DE PERFIL --- */
+        .profile-container {
+            max-width: 900px;
+            margin: -40px auto 50px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+        .level-badge {
+            background: var(--gold);
+            color: black;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+        .player-name h1 { font-size: 2.5rem; margin: 0; line-height: 1; }
+        .player-tag { color: var(--accent); font-weight: bold; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .stat-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-card span { display: block; font-size: 0.8rem; color: #aaa; }
+        .stat-card b { font-size: 1.5rem; color: var(--gold); }
+
+        /* --- MAZO --- */
+        .deck-section { margin-top: 40px; }
+        .deck-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .card-img { width: 100%; border-radius: 5px; border: 1px solid #444; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">TLC</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="mazos.html">Mazos</a></li>
+                <li><a href="jugadores.html" style="color:var(--gold)">Jugadores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-section">
+        <h1>Buscador de Jugadores</h1>
+        <p>Introduce el TAG del jugador para ver sus estadísticas</p>
+        <div class="search-box">
+            <input type="text" id="playerTag" placeholder="#9PN90JJL">
+            <button class="btn-search" onclick="searchPlayer()">BUSCAR</button>
+        </div>
+    </div>
+
+    <div class="profile-container" id="profileDisplay">
+        <div class="profile-header">
+            <div class="level-badge" id="lvl">--</div>
+            <div class="player-name">
+                <h1 id="name">Jugador</h1>
+                <span class="player-tag" id="tag">#00000000</span>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span>Trofeos Máximos</span>
+                <b id="trophies">0</b>
+            </div>
+            <div class="stat-card">
+                <span>Victorias</span>
+                <b id="wins">0</b>
+            </div>
+            <div class="stat-card">
+                <span>Clan</span>
+                <b id="clan">Ninguno</b>
+            </div>
+            <div class="stat-card">
+                <span>Carta Favorita</span>
+                <b id="favCard">---</b>
+            </div>
+        </div>
+
+        <div class="deck-section">
+            <h3 style="text-align: center; color: var(--gold);">Mazo Actual</h3>
+            <div class="deck-grid" id="currentDeck">
+                </div>
+        </div>
+
+        <div class="advanced-stats">
+    <h3 class="section-title">Estadísticas de Batalla</h3>
+    <div class="stats-table">
+        <div class="table-row"><span>Victorias en Desafío</span><b id="challengeWins">0</b></div>
+        <div class="table-row"><span>Cartas ganadas en Desafíos</span><b id="challengeCards">0</b></div>
+        <div class="table-row"><span>Donaciones Totales</span><b id="donations">0</b></div>
+        <div class="table-row"><span>Días en el Juego</span><b id="accountAge">0</b></div>
+        <div class="table-row"><span>Victorias en Guerra de Clanes</span><b id="warWins">0</b></div>
+    </div>
+</div>
+
+<div class="chests-section">
+    <h3 class="section-title">Próximos Cofres</h3>
+    <div class="chests-grid" id="chestCycle">
+        </div>
+</div>
+    </div>
+
+    <script>
+        // Simulación de búsqueda (Para que sea real necesitarías la API de Supercell)
+        function searchPlayer() {
+            const tag = document.getElementById('playerTag').value;
+            if(!tag) return alert("Escribe un tag");
+
+            // Animación de carga
+            document.getElementById('name').innerText = "Cargando...";
+
+            // Aquí simularíamos los datos
+            setTimeout(() => {
+                document.getElementById('lvl').innerText = "15";
+                document.getElementById('name').innerText = "BENIJU";
+                document.getElementById('tag').innerText = tag.toUpperCase();
+                document.getElementById('trophies').innerText = "9000";
+                document.getElementById('wins').innerText = "15,420";
+                document.getElementById('clan').innerText = "Team Queso";
+                document.getElementById('favCard').innerText = "Montapuercos";
+                
+                // Pintar mazo de ejemplo
+                const deck = document.getElementById('currentDeck');
+                deck.innerHTML = "";
+                for(let i=0; i<8; i++) {
+                    deck.innerHTML += `<img src="https://statsroyale.com/images/cards/full/15000010.png" class="card-img">`;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

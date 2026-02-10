@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions"
+
+# Esto redirige tus peticiones limpias a la función oculta
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/proxy?endpoint=:splat"
+  status = 200

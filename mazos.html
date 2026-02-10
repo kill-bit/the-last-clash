@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazos Top | TLC - The Last Clash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --elixir: #f032ff;
+            --border: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--text); }
+
+        /* --- NAVEGACIÓN --- */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--gold);
+            position: sticky;
+            top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        nav a:hover { color: var(--gold); }
+
+        /* --- CONTENIDO DE MAZOS --- */
+        .container { padding: 40px 5%; max-width: 1200px; margin: auto; }
+        
+        .page-title { text-align: center; margin-bottom: 50px; }
+        .page-title h1 { font-size: 3rem; color: var(--gold); font-weight: 900; }
+        .page-title p { opacity: 0.7; }
+
+        /* --- GRID DE MAZOS --- */
+        .decks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .deck-container {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+        .deck-container:hover { border-color: var(--gold); transform: translateY(-5px); }
+
+        .deck-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .deck-info h2 { font-size: 1.2rem; color: var(--gold); }
+        .elixir-tag {
+            background: var(--elixir);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 0.9rem;
+        }
+
+        /* --- LAS 8 CARTAS --- */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .card-item {
+            aspect-ratio: 2/2.5;
+            background: #2a2a2a;
+            border-radius: 8px;
+            border: 2px solid #444;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- BOTONES DE ACCIÓN --- */
+        .deck-footer {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-copy {
+            flex: 2;
+            background: var(--gold);
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 900;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .btn-stats {
+            flex: 1;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* --- FOOTER --- */
+        footer { background: #000; padding: 40px; text-align: center; border-top: 1px solid #222; margin-top: 60px; }
+        .legal { font-size: 0.7rem; color: #555; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">TLC</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="mazos.html" style="color:var(--gold)">Mazos Top</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+                <li><a href="clanes.html">Clanes</a></li>
+                <li><a href="probabilidades.html">Probabilidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-title">
+            <h1>Meta Decks</h1>
+            <p>Los mazos con mayor porcentaje de victoria en la Arena Legendaria</p>
+        </div>
+
+        <div class="decks-grid">
+            
+            <div class="deck-container">
+                <div class="deck-info">
+                    <h2>Ciclo de Montapuercos</h2>
+                    <span class="elixir-tag">2.6 Elixir</span>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item"><img src="https://static.wikia.nocookie.net/clashroyale/images/d/df/HogRiderCard.png" alt="Hog"></div>
+                    <div class="card-item"><img src="https://static.wikia.nocookie.net/clashroyale/images/c/ca/FireballCard.png" alt="Fireball"></div>
+                    <div class="card-item"></div><div class="card-item"></div>
+                    <div class="card-item"></div><div class="card-item"></div>
+                    <div class="card-item"></div><div class="card-item"></div>
+                </div>
+                <div class="deck-footer">
+                    <button class="btn-copy">Copiar Mazo</button>
+                    <button class="btn-stats">Ver Stats</button>
+                </div>
+            </div>
+
+            <div class="deck-container">
+                <div class="deck-info">
+                    <h2>P.E.K.K.A Bridge Spam</h2>
+                    <span class="elixir-tag">3.9 Elixir</span>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item"><img src="https://static.wikia.nocookie.net/clashroyale/images/7/7b/PEKKACard.png" alt="Pekka"></div>
+                    <div class="card-item"><img src="https://static.wikia.nocookie.net/clashroyale/images/0/00/BanditCard.png" alt="Bandit"></div>
+                    <div class="card-item"></div><div class="card-item"></div>
+                    <div class="card-item"></div><div class="card-item"></div>
+                    <div class="card-item"></div><div class="card-item"></div>
+                </div>
+                <div class="deck-footer">
+                    <button class="btn-copy">Copiar Mazo</button>
+                    <button class="btn-stats">Ver Stats</button>
+                </div>
+            </div>
+
+            <div class="deck-container">
+                <div class="deck-info">
+                    <h2>Lavaloon Beatdown</h2>
+                    <span class="elixir-tag">4.1 Elixir</span>
+                </div>
+                <div class="cards-grid">
+                    <div class="card-item"><img src="https://static.wikia.nocookie.net/clashroyale/images/f/f6/LavaHoundCard.png" alt="Lava"></div>
+                    <div class="card-item"></div><div class="card-item"></div><div class="card-item"></div>
+                    <div class="card-item"></div><div class="card-item"></div><div class="card-item"></div><div class="card-item"></div>
+                </div>
+                <div class="deck-footer">
+                    <button class="btn-copy">Copiar Mazo</button>
+                    <button class="btn-stats">Ver Stats</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo">TLC</div>
+        <div class="legal">
+            Hecho por TLC Team. Clash Royale y sus logotipos son marcas registradas de Supercell.
+        </div>
+    </footer>
+
+</body>
+<script>
+async function cargarMazosTop() {
+    const grid = document.querySelector('.deck-grid'); // Asegúrate de que tu div tenga esta clase
+    
+    // Pedimos el Top 5 jugadores globales para ver qué mazos usan
+    const response = await fetch('/api/locations/global/rankings/players?limit=6');
+    const data = await response.json();
+    
+    grid.innerHTML = '';
+
+    for (const player of data.items) {
+        // Obtenemos el detalle completo del jugador para ver su mazo
+        const detailResp = await fetch(`/api/players/${encodeURIComponent(player.tag)}`);
+        const pData = await detailResp.json();
+        
+        let cartasHtml = '';
+        pData.currentDeck.forEach(c => {
+            cartasHtml += `<div class="card-slot"><img src="${c.iconUrls.medium}" style="width:100%"></div>`;
+        });
+
+        grid.innerHTML += `
+            <div class="deck-card">
+                <h4 style="color: var(--gold);">${player.name} (Top #${player.rank})</h4>
+                <p style="font-size: 0.8rem;">Copas: ${player.trophies}</p>
+                <div class="cards-mini" style="display:grid; grid-template-columns:repeat(4,1fr); gap:5px;">
+                    ${cartasHtml}
+                </div>
+            </div>
+        `;
+    }
+}
+cargarMazosTop();
+</script>
+</html>

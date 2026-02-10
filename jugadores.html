@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Top | TLC - The Last Clash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --border: #333;
+            --silver: #c0c0c0;
+            --bronze: #cd7f32;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--text); }
+
+        /* --- HEADER --- */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--gold);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        nav a:hover { color: var(--gold); }
+
+        /* --- RANKING TABLE --- */
+        .container { padding: 50px 5%; max-width: 1000px; margin: auto; }
+        .ranking-header { text-align: center; margin-bottom: 40px; }
+        .ranking-header h1 { font-size: 3rem; color: var(--gold); font-weight: 900; }
+
+        .leaderboard {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+
+        .leaderboard th {
+            padding: 15px;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .player-row {
+            background: var(--card-bg);
+            transition: 0.3s;
+        }
+        .player-row:hover { transform: scale(1.02); background: #222; }
+
+        .player-row td {
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .player-row td:first-child { border-left: 1px solid var(--border); border-radius: 15px 0 0 15px; font-weight: 900; font-size: 1.2rem; }
+        .player-row td:last-child { border-right: 1px solid var(--border); border-radius: 0 15px 15px 0; }
+
+        .rank-1 { color: var(--gold); }
+        .rank-2 { color: var(--silver); }
+        .rank-3 { color: var(--bronze); }
+
+        .player-info { display: flex; align-items: center; gap: 15px; }
+        .clan-tag { font-size: 0.7rem; color: #888; display: block; }
+        
+        .trophies {
+            color: var(--gold);
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- FOOTER --- */
+        footer { background: #000; padding: 40px; text-align: center; margin-top: 50px; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">TLC</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="mazos.html">Mazos Top</a></li>
+                <li><a href="jugadores.html" style="color:var(--gold)">Jugadores</a></li>
+                <li><a href="clanes.html">Clanes</a></li>
+                <li><a href="probabilidades.html">Probabilidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="ranking-header">
+            <h1>Top Mundos</h1>
+            <p>Los mejores jugadores de la temporada actual</p>
+        </div>
+
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Jugador</th>
+                    <th>Trofeos</th>
+                    <th>Victorias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="player-row">
+                    <td class="rank-1">#1</td>
+                    <td>
+                        <div class="player-info">
+                            <div>
+                                <strong>Mohamed Light</strong>
+                                <span class="clan-tag">Clan: Team Queso</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="trophies">🏆 9450</td>
+                    <td>89%</td>
+                </tr>
+
+                <tr class="player-row">
+                    <td class="rank-2">#2</td>
+                    <td>
+                        <div class="player-info">
+                            <div>
+                                <strong>Pandora</strong>
+                                <span class="clan-tag">Clan: SK Gaming</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="trophies">🏆 9320</td>
+                    <td>85%</td>
+                </tr>
+
+                <tr class="player-row">
+                    <td class="rank-3">#3</td>
+                    <td>
+                        <div class="player-info">
+                            <div>
+                                <strong>Ian77</strong>
+                                <span class="clan-tag">Clan: Tribe Gaming</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="trophies">🏆 9210</td>
+                    <td>82%</td>
+                </tr>
+                
+                </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div class="logo">TLC</div>
+        <p>© 2026 The Last Clash</p>
+    </footer>
+
+</body>
+</html>
